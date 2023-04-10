@@ -2,7 +2,7 @@
 
 import CartContainer from "./CartContainer";
 import CheckBoxContainer from "./CheckBoxContainer";
-import DeleteButton from "./DeleteButton";
+import DeleteButton from "./DeleteButton/DeleteButton";
 
 export default function CartProductsList({ carts }) {
   return (
