@@ -1,4 +1,5 @@
-import CartTrashImage from "./CartTrashImage";
+import CartTrashImage from "../CartTrashImage";
+import Spin from "../Spin/Spin";
 
 export default function CartContainer({ product }) {
   return (
@@ -20,13 +21,7 @@ export default function CartContainer({ product }) {
         </div>
         <div className="flex-col-center justify-end gap-15">
           <CartTrashImage />
-          <div className="number-input-container">
-            <input type="number" className="number-input" value="1" />
-            <div>
-              <button className="number-input-button">▲</button>
-              <button className="number-input-button">▼</button>
-            </div>
-          </div>
+          <Spin value="1" />
           <span className="cart-price">{product.price}원</span>
         </div>
       </div>

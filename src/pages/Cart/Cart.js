@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import CartProductsList from "../../components/CartProductsList";
-import ExpectedOrderPriceContainer from "../../components/ExpectedOrderPriceContainer";
+import CartProductList from "../../components/CartProductList/CartProductList";
+import ExpectedOrderPriceContainer from "../../components/ExpectedOrderPriceContainer/ExpectedOrderPriceContainer";
 
 export default function Cart() {
   const [carts, setCarts] = useState([]);
@@ -33,12 +33,13 @@ export default function Cart() {
       </header>
       <div className="flex">
         <section className="cart-left-section">
-          <CartProductsList carts={carts} />
+          <CartProductList carts={carts} />
         </section>
         <section className="cart-right-section">
           <ExpectedOrderPriceContainer
+            totalPrice="21400"
             // totalPrice={() => getTotalPrice()}
-            totalLength={carts.length}
+            totalCount={carts.length}
           />
         </section>
       </div>

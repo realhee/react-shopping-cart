@@ -11,5 +11,7 @@ const Template = (args) => <DeleteButton {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: "선택삭제",
+  title: "선택삭제",
 };
+
+// TODO : click event Actions
