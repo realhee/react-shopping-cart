@@ -10,7 +10,7 @@ export default function CartProductList({ carts }) {
     <>
       <div className="flex justify-between items-center">
         <CheckBoxContainer isChecked="true" />
-        <DeleteButton title="상품삭제" />
+        <DeleteButton label="상품삭제" />
       </div>
       <CartTitle title="든든배송 상품" count={carts.length} />
       <hr className="divide-line-gray mt-10" />
