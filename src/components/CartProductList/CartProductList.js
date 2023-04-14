@@ -15,7 +15,13 @@ export default function CartProductList({ carts }) {
       <CartTitle title="든든배송 상품" count={carts.length} />
       <hr className="divide-line-gray mt-10" />
       {carts.map((item) => {
-        return <CartContainer key={item.id} product={item.product} />;
+        return (
+          <CartContainer
+            key={item.id}
+            product={item.product}
+            isChecked={true}
+          />
+        );
       })}
     </>
   );

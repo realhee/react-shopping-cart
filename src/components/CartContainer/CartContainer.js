@@ -1,7 +1,7 @@
 import CartTrashImage from "../CartTrashImage";
 import Spin from "../Spin/Spin";
 
-export default function CartContainer({ product }) {
+export default function CartContainer({ product, isChecked }) {
   return (
     <>
       <div className="cart-container">
@@ -10,7 +10,7 @@ export default function CartContainer({ product }) {
             className="checkbox"
             name="checkbox"
             type="checkbox"
-            checked="true"
+            checked={isChecked}
           />
           <img
             className="w-144 h-144"
