@@ -9,7 +9,7 @@ const orders = [
   }),
 
   rest.post("/orders", (req, res, ctx) => {
-    todos.push(req.body);
+    // orders_data.push(req.body);
     return res(ctx.status(201));
   }),
 ];
