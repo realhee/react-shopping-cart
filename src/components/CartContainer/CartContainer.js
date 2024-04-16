@@ -1,4 +1,5 @@
 import CartTrashImage from "../CartTrashImage";
+import { maskingProductPrice } from "../../utils/index";
 import Spin from "../Spin/Spin";
 
 export default function CartContainer({ product, isChecked }) {
@@ -22,7 +23,9 @@ export default function CartContainer({ product, isChecked }) {
         <div className="flex-col-center justify-end gap-15">
           <CartTrashImage />
           <Spin value="1" />
-          <span className="cart-price">{product.price}원</span>
+          <span className="cart-price">
+            {maskingProductPrice(product.price)}원
+          </span>
         </div>
       </div>
       <hr className="divide-line-thin mt-10" />
