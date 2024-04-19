@@ -5,6 +5,7 @@ import Header from "./components/layouts/Header";
 import ProductList from "./pages/ProductList";
 import Cart from "./pages/Cart";
 import Order from "./pages/Order";
+import ProductDetail from "./pages/ProductDetail";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
@@ -24,6 +25,7 @@ export default function App() {
             />
             <Route exact path={ROUTE_PATH.CART} element={<Cart />} />
             <Route exact path={ROUTE_PATH.ORDER} element={<Order />} />
+            <Route exact path={ROUTE_PATH.PRODUCT_DETAIL + ":id"} element={<ProductDetail />} />
           </Routes>
         </BrowserRouter>
         <ReactQueryDevtools initialIsOpen={false} />

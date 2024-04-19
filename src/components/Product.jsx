@@ -11,7 +11,9 @@ export default function Product({ product }) {
   return (
     <div data-id={product.id}>
       <div className="product-div-inner">
-        <img src={product.imageUrl} alt={product.name} />
+        <Link to={ROUTE_PATH.PRODUCT_DETAIL + product.id}>
+          <img src={product.imageUrl} alt={product.name} />
+        </Link>
       </div>
       <div className="flex justify-between w-280 p-5">
         <div className="product-info">
