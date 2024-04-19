@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getProducts } from "../../api/product";
 import { maskingProductPrice } from "../../utils/product";
+import { ROUTE_PATH } from "../../constants/page";
 
 export default function ProductDetail() {
   const {data} = useQuery({
@@ -27,9 +28,11 @@ export default function ProductDetail() {
               <span className="product-detail-info__price">{maskingProductPrice(product.price)}원</span>
             </div>
           </div>
-          <button className="product-detail-button flex-center mt-20">
-            장바구니
-          </button>
+          <Link to={ROUTE_PATH.CART} className="product-detail-button flex-center mt-20">
+            <button >
+                장바구니
+            </button>
+          </Link>          
         </div>
     </div>
   );
