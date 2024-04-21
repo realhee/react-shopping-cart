@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import OrderList from "../../components/OrderList";
+import PageTitle from "../../components/PageTitle/PageTitle";
 
 export default function Order() {
   const [orders, setOrders] = useState([]);
@@ -15,10 +16,7 @@ export default function Order() {
 
   return (
     <section className="order-section">
-      <header className="flex-col-center mt-20">
-        <h2 className="order-section__title">주문 목록</h2>
-        <hr className="divide-line mt-20" />
-      </header>
+      <PageTitle titlename="주문 목록" />
       <OrderList orders={orders} />
     </section>
   );

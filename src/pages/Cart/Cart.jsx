@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import CartProductList from "../../components/CartProductList/CartProductList";
 import ExpectedOrderPriceContainer from "../../components/ExpectedOrderPriceContainer/ExpectedOrderPriceContainer";
+import PageTitle from "../../components/PageTitle/PageTitle";
 
 export default function Cart() {
   const [carts, setCarts] = useState([]);
@@ -27,10 +28,7 @@ export default function Cart() {
 
   return (
     <section className="cart-section">
-      <header className="flex-col-center mt-20">
-        <h2 className="cart-section__title">장바구니</h2>
-        <hr className="divide-line mt-20" />
-      </header>
+      <PageTitle titlename="장바구니" />
       <div className="flex">
         <section className="cart-left-section">
           <CartProductList carts={carts} />
